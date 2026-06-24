@@ -1,0 +1,24 @@
+import time
+import os
+
+frames = [
+    r"   _._   ",
+    r"  /   \  ",
+    r" |     | ",
+    r" |  o  | ",
+    r"  \___/  ",
+]
+
+wave = [
+    ["   _._   ", "  /   \\  ", " |     | ", " |  o  | ", "  \\___/  "],
+    ["   _._   ", "  /   \\  ", " |  o  | ", " |     | ", "  \\___/  "],
+]
+
+try:
+    while True:
+        for frame in wave:
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print('\n'.join(frame))
+            time.sleep(0.4)
+except KeyboardInterrupt:
+    pass
